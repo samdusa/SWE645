@@ -21,7 +21,7 @@ pipeline {
 					echo "${env.BUILD_ID}"
 					img = docker.build "sam93dusa/swe645:${env.BUILD_ID}"
 
-					withDockerRegistry(credentialsId: 'DockerHub', url: '') {
+					withDockerRegistry(credentialsId: 'DockerNew', url: '') {
 						echo "Creating docker image and pusing to docker hub ..."
 
 						img.push "${env.BUILD_ID}"
