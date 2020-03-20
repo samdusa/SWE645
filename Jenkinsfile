@@ -11,7 +11,7 @@ pipeline {
             steps {
 				echo 'Creating the Jar ...'
 				sh 'java -version'
-				sh 'jar -cvf surveyform.war -C webapp/ index.html -C webapp/ SurveyForm.css'
+				sh 'jar -cvf surveyform.war -C src/main/webapp/ index.html -C src/main/webapp/ SurveyForm.css'
             }
         }
 		
