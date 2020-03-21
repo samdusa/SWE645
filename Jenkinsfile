@@ -36,7 +36,7 @@ pipeline {
 				sh 'gcloud container clusters get-credentials cluster1 --zone us-central1-a'
 				sh 'kubectl config view'
 				sh "kubectl get deployments"
-				sh "kubectl set image deployment/survey-form-gcp survey-form-image-gcp=sam93dusa/swe645:${env.BUILD_ID}"
+				sh "kubectl set image deployment/swe645sam-deployment swe645proj2=sam93dusa/swe645:${env.BUILD_ID}"
 			}
 			
 		}
